@@ -17,9 +17,6 @@ class EmailController extends Controller
         ]);
 
         
-        $inputEmail=$request->input('email');
-        $emails=Email::get(['email']);
-        
         
 
         
@@ -30,6 +27,6 @@ class EmailController extends Controller
             $email->save();   
         }
         
-       //return view('index');
+       return view('index');
     }
 }
