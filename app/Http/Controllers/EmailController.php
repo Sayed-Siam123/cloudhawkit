@@ -4,38 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use App\Email;
 
 class EmailController extends Controller
 {
+ 
     public function subscription(Request $request)
     {
         $check=$this->validate($request,[
             'email' => 'required'
         ]);
 
-        $emailCheck=false;
-        $emails=Email::select('email');
         
-        foreach($emails as $email)
-        {
-            if($email==$request->input('email'))
-            {
-                $emailCheck=false;
-            }
-            else
-            {
-                $emailCheck=true;
-            }
-        }
+        $inputEmail=$request->input('email');
+        $emails=Email::get(['email']);
+        
+        
 
-        if($check==true and $emailCheck==true)
-        {
+        
+        if($check==true)
+        {    
             $email= new Email;
             $email->email=$request->input('email');
-            $email->save();
+            $email->save();   
         }
         
-       return view('index');
+       //return view('index');
     }
 }
