@@ -149,11 +149,12 @@
             <h1 class="white-color">Axoma Manage Everything in One Place</h1>
             <p class="white-color-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="subscribe-block">
-              <div class="form-group">
-                <input class="form-control" type="email" placeholder="Your email" name="name">
+              <form class="form-group" method="POST" action="{{action('EmailController@subscription')}}">
+                {{ csrf_field() }}
+                <input class="form-control" type="email" placeholder="Your email" name="email">
                 <span class="input-focus-effect theme-bg"></span>
-                <button class="btn-theme btn">Get Updates</button>
-              </div>
+                <button class="btn-theme btn" type="SUBMIT">Get Updates</button>
+              </form>
             </div>
           </div> <!-- col -->
           <div class="col-lg-12">
