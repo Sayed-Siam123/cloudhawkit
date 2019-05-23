@@ -115,12 +115,15 @@
           </ul>
         </div>
         <!-- / -->
-
+        
       </div><!-- Container -->
+      
     </nav> <!-- Navbar -->
   </header>
   <!-- Header End -->
-
+  
+  
+  
   <!-- Main -->
   <main>
 
@@ -131,6 +134,7 @@
       Home Banner
     =============================
     -->
+   
     <section id="home" class="round-box home-banner-06 theme-bg">
       <div class="round">
         <div class="r1"></div>
@@ -149,11 +153,12 @@
             <h1 class="white-color">Axoma Manage Everything in One Place</h1>
             <p class="white-color-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="subscribe-block">
-              <div class="form-group">
-                <input class="form-control" type="email" placeholder="Your email" name="name">
+              <form class="form-group" method="POST" action="{{action('EmailController@subscription')}}">
+                {{ csrf_field() }}
+                <input class="form-control" type="email" placeholder="Your email" name="email">
                 <span class="input-focus-effect theme-bg"></span>
-                <button class="btn-theme btn">Get Updates</button>
-              </div>
+                <button class="btn-theme btn" type="SUBMIT">Get Updates</button>
+              </form>
             </div>
           </div> <!-- col -->
           <div class="col-lg-12">
@@ -164,7 +169,11 @@
     </section>
     <!-- / -->
     
-
+    <section>
+        <div>
+          @include('incl.message')
+        </div>
+      </section>
     <!-- 
     =============================
       About us
