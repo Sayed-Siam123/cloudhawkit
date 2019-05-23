@@ -15,14 +15,11 @@ class EmailController extends Controller
         $check=$this->validate($request,[
             'email' => ['required', 'string', 'email', 'unique:emails']
         ]);
-
-        
-           
+            
         $email= new Email;
         $email->email=$request->input('email');
-        $email->save();   
-        
-        
-       return view('index');
+        $email->save();
+           
+        return view('index');
     }
 }
