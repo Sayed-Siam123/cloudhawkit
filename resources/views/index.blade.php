@@ -115,12 +115,15 @@
           </ul>
         </div>
         <!-- / -->
-
+        
       </div><!-- Container -->
+      
     </nav> <!-- Navbar -->
   </header>
   <!-- Header End -->
-
+  
+  
+  
   <!-- Main -->
   <main>
 
@@ -131,6 +134,7 @@
       Home Banner
     =============================
     -->
+   
     <section id="home" class="round-box home-banner-06 theme-bg">
       <div class="round">
         <div class="r1"></div>
@@ -165,7 +169,11 @@
     </section>
     <!-- / -->
     
-
+    <section>
+        <div>
+          @include('incl.message')
+        </div>
+      </section>
     <!-- 
     =============================
       About us

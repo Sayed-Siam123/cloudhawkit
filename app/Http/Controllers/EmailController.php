@@ -17,13 +17,11 @@ class EmailController extends Controller
         ]);
 
         
-
-        if($check==true)
-        {    
-            $email= new Email;
-            $email->email=$request->input('email');
-            $email->save();   
-        }
+           
+        $email= new Email;
+        $email->email=$request->input('email');
+        $email->save();   
+        
         
        return view('index');
     }
