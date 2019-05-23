@@ -13,14 +13,8 @@ class EmailController extends Controller
     public function subscription(Request $request)
     {
         $check=$this->validate($request,[
-            'email' => 'required'
+            'email' => ['required', 'string', 'email', 'unique:emails']
         ]);
-
-        
-        $inputEmail=$request->input('email');
-        $emails=Email::get(['email']);
-        
-        
 
         
         if($check==true)
@@ -30,6 +24,6 @@ class EmailController extends Controller
             $email->save();   
         }
         
-       //return view('index');
+       return view('index');
     }
 }
