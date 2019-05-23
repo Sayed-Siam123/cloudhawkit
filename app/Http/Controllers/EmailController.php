@@ -17,7 +17,6 @@ class EmailController extends Controller
         ]);
 
         
-
         if($check==true)
         {    
             $email= new Email;
