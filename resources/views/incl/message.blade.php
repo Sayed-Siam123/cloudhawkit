@@ -1,15 +1,16 @@
 @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
+    <div class="text-danger font-weight-bold">
+        
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+                {{ $error }}
             @endforeach
-        </ul>
+        
     </div>
+    
 @endif
 
 @if (session('status'))
-    <div class="alert alert-success">
+    <div class="text-success font-weight-bold">
         {{ session('status') }}
     </div>
 @endif
