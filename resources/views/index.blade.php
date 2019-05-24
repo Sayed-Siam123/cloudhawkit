@@ -157,8 +157,9 @@
                 {{ csrf_field() }}
                 <input class="form-control" type="email" placeholder="Your email" name="email">
                 <span class="input-focus-effect theme-bg"></span>
-                <button class="btn-theme btn" type="SUBMIT">Get Updates</button>
+                <button class="btn-theme btn" type="SUBMIT" >Get Updates</button>
               </form>
+              <span class="input-focus-effect theme-bg">@include('incl.message')</span>
             </div>
           </div> <!-- col -->
           <div class="col-lg-12">
@@ -168,12 +169,9 @@
       </div>
     </section>
     <!-- / -->
+    <!-- Modal -->
+
     
-    <section>
-        <div>
-          @include('incl.message')
-        </div>
-      </section>
     <!-- 
     =============================
       About us
@@ -225,7 +223,7 @@
       </div> <!-- conainer -->
     </section>
     <!-- / -->
-
+    
     <!-- 
     =============================
       Features
