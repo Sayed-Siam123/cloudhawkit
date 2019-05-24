@@ -10,7 +10,7 @@
 @endif
 
 @if (session('status'))
-    <div class="text-success font-weight-bold">
+    <div class="h4 p-5 white-color">
         {{ session('status') }}
     </div>
 @endif
