@@ -153,7 +153,7 @@
             <h1 class="white-color">Axoma Manage Everything in One Place</h1>
             <p class="white-color-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="subscribe-block">
-              <form class="form-group" method="POST" action="{{action('EmailController@subscription')}}">
+              <form class="form-group" method="POST" action="{{action('EmailController@subscription')}}" data-toggle="modal" data-target="#exampleModal">
                 {{ csrf_field() }}
                 <input class="form-control" type="email" placeholder="Your email" name="email">
                 <span class="input-focus-effect theme-bg"></span>
@@ -173,7 +173,7 @@
         <div>
           @include('incl.message')
         </div>
-      </section>
+    </section>
     <!-- 
     =============================
       About us

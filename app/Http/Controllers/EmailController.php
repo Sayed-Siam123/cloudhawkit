@@ -20,6 +20,6 @@ class EmailController extends Controller
         $email->email=$request->input('email');
         $email->save();
            
-        return view('index');
+        return redirect('/')->with('status', 'Subscription Success!');
     }
 }
