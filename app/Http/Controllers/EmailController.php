@@ -12,7 +12,7 @@ class EmailController extends Controller
  
     public function subscription(Request $request)
     {
-        $check=$this->validate($request,[
+        $this->validate($request,[
             'email' => ['required', 'string', 'email', 'unique:emails']
         ]);
             
